@@ -1,4 +1,5 @@
 #include "qr_code_patterns.hpp"
+#include "mask_pattern.hpp"
 #include "bmp_builder.hpp"
 
 #include <iostream>
@@ -17,7 +18,8 @@ int main(int argc, const char * argv[])
        content[i] = false;
     }
 
-    qr_code_gen::squarePattern(1, 1, 5, qr_size, content);
+    // qr_code_gen::squarePatterns(6, qr_size, content);
+    qr_code_gen::maskB(qr_size, content);
     // qr_code_gen::toggleCell(0, 2, qr_size, content);
     // qr_code_gen::toggleCell(2, 0, qr_size, content);
     

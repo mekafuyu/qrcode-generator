@@ -35,4 +35,15 @@ namespace qr_code_gen
         int curr = x + (qr_size * (qr_size - 1 - y));
         content[curr] = !content[curr];
     }
+    void squarePatterns(int sqr_size, int qr_size, bool *content)
+    {
+        int offset = qr_size - (sqr_size + 2);
+        squarePattern(1, 1, sqr_size, qr_size, content);
+        squarePattern(offset, 1, sqr_size, qr_size, content);
+        squarePattern(1, offset, sqr_size, qr_size, content);
+        
+    }
+    void maskPattern(int mask, int qr_size, bool *content)
+    {
+    }
 }
